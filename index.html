@@ -1,67 +1,213 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en" data-langs="en,ru,es,pt,fr,de,it,zh-Hans,zh-Hant,ja,ko,tr,id">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Карта странствий — конфиденциальность</title>
-<style>
-:root{--bg:#f8fafb;--ink:#0f1726;--ink2:#465364;--line:#dbe2e7;--accent:#2140c8}
-@media (prefers-color-scheme:dark){:root{--bg:#10172a;--ink:#eef2fb;--ink2:#a8b3c9;--line:#27324f;--accent:#7b93ff}}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
-main{max-width:680px;margin:0 auto;padding:40px max(20px,env(safe-area-inset-left)) 64px}
-h1{font-size:28px;line-height:1.2;margin:0 0 6px}
-h2{font-size:19px;margin:32px 0 6px}
-p,li{color:var(--ink2)}
-.meta{color:var(--ink2);font-size:14px}
-hr{border:0;border-top:1px solid var(--line);margin:48px 0}
-a{color:var(--accent)}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title data-i18n="meta.title">Wander Atlas — your travel map for iPhone</title>
+  <meta name="description" data-i18n-attr="content:meta.description" content="Mark the countries you’ve been to and watch your world fill in. Find trips in your photos, collect passport stamps, add widgets. No sign-up, no ads, works offline.">
+  <meta name="theme-color" content="#060912">
+  <meta property="og:title" content="Wander Atlas">
+  <meta property="og:description" content="Mark the countries you’ve been to and watch your world fill in.">
+  <meta property="og:image" content="assets/poster.jpg">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="preload" as="image" href="assets/poster.jpg">
+  <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
-<main>
-<h1>Карта странствий: конфиденциальность</h1>
-<p class="meta">Действует с 17 октября 2026 года</p>
 
-<h2>Коротко</h2>
-<p>Приложение не собирает о вас никаких данных. Нет регистрации, рекламы, аналитики и трекинга. Разработчик не получает ваши отметки, заметки, фото или геопозицию.</p>
+  <header class="site-header" data-header>
+    <a class="logo" href="#top" aria-label="Wander Atlas"><img src="assets/img/favicon.png" alt="" width="28" height="28"><span>Wander Atlas</span></a>
+    <nav class="nav" aria-label="Menu">
+      <a href="#features" data-i18n="nav.features">Features</a>
+      <a href="#pro" data-i18n="nav.pro">Pro</a>
+      <a href="#privacy" data-i18n="nav.privacy">Privacy</a>
+    </nav>
+    <select class="lang" data-lang aria-label="Language"></select>
+    <a class="btn btn--ghost btn--sm" href="#get" data-i18n="cta.soon">Coming to the App Store</a>
+  </header>
 
-<h2>Где хранятся ваши отметки</h2>
-<p>Страны, годы поездок, заметки и места хранятся на вашем устройстве. Если вы вошли в iCloud, приложение синхронизирует их между вашими устройствами через ваш личный iCloud (хранилище «ключ-значение» Apple). Эти данные видите только вы.</p>
+  <!--
+    The whole site is one scroll scene over the video (frame-scrub engine kept from the original page).
+    data-frames    — number of frames in assets/frames/{wide,tall}
+    data-video-map — scroll share : frame pairs; the video is scrubbed piecewise-linearly between them
+                     (plane on the ground under the first blocks, Earth from orbit under Pro, privacy and the end)
+    data-fade      — chapter fade in/out, share of the scroll
+    chapter timings (data-start / data-end) — shares of the section scroll.
+    Section height is in site.css (.journey).
+  -->
+  <main class="journey" id="top" data-journey
+        data-frames="193"
+        data-path="assets/frames/{set}/{index}.webp"
+        data-video-map="0:0 0.16:70 0.26:96 0.36:120 0.46:145 0.56:160 0.97:192"
+        data-fade="0.016">
+    <div class="journey__sticky">
+      <canvas class="journey__canvas" data-canvas aria-hidden="true"></canvas>
+      <div class="journey__shade" aria-hidden="true"></div>
 
-<h2>Фото</h2>
-<p>Функция «Найти страны по фото» работает только после вашего разрешения. Приложение читает у фото только геометку и год съёмки, прямо на телефоне. Сами фото и их координаты никуда не отправляются и не сохраняются: сохраняются только страны и годы, которые вы подтвердили.</p>
+      <section class="chapter chapter--hero" data-chapter data-start="0" data-end="0.05">
+        <p class="eyebrow" data-i18n="hero.eyebrow">Travel map for iPhone</p>
+        <h1 class="display" data-i18n="hero.title">The whole world,<br><em>on your map</em></h1>
+        <p class="lead" data-i18n="hero.lead">Mark the countries you’ve been to and watch the world fill in, trip by trip.</p>
+      </section>
 
-<h2>Покупки</h2>
-<p>Покупка Pro проходит через App Store. Платёжные данные обрабатывает Apple, разработчик их не видит.</p>
+      <section class="chapter chapter--card" data-chapter data-start="0.075" data-end="0.15" id="features">
+        <div class="card">
+          <div class="card__text">
+            <span class="chapter__num pop" style="--d:1">01</span>
+            <h2 class="chapter__title pop" style="--d:2" data-i18n="ch1.title">Tap. <em>Been.</em></h2>
+            <p class="chapter__text pop" style="--d:3" data-i18n="ch1.text">Choose Been, Want or Not into it for any country. Long-press and it’s painted in one go.</p>
+          </div>
+          <div class="card__media card__media--pair">
+            <figure class="phone pop pop--phone pop--back" style="--d:3"><img src="assets/screens/map.webp" alt="" width="660" height="1434"></figure>
+            <figure class="phone pop pop--phone" style="--d:4"><img src="assets/screens/card.webp" alt="" width="660" height="1434"></figure>
+          </div>
+        </div>
+      </section>
 
-<h2>Экспорт и удаление</h2>
-<p>В разделе «Ещё → Данные» можно сохранить копию в JSON или таблицу CSV и стереть все отметки. Удаление приложения удаляет данные с устройства; данные в iCloud удаляются в настройках iCloud.</p>
+      <section class="chapter chapter--card chapter--right" data-chapter data-start="0.175" data-end="0.245">
+        <div class="card">
+          <div class="card__text">
+            <span class="chapter__num pop" style="--d:1">02</span>
+            <h2 class="chapter__title pop" style="--d:2" data-i18n="ch2.title">Your photos <em>remember</em></h2>
+            <p class="chapter__text pop" style="--d:3" data-i18n="ch2.text">Wander Atlas reads the locations of your photos and suggests countries and trip years. Everything stays on your phone.</p>
+          </div>
+          <div class="card__media card__media--photos" aria-hidden="true">
+            <span class="photo pop" style="--d:3;--r:-8deg;--x:-100%;--y:-72%;z-index:2"><b>🇮🇹</b><i>2019</i></span>
+            <span class="photo pop" style="--d:4;--r:6deg;--x:-18%;--y:-104%"><b>🇯🇵</b><i>2024</i></span>
+            <span class="photo pop" style="--d:5;--r:-3deg;--x:-58%;--y:-2%"><b>🇵🇹</b><i>2023</i></span>
+            <span class="photo pop" style="--d:6;--r:9deg;--x:18%;--y:-1%;z-index:3"><b>🇲🇽</b><i>2022</i></span>
+          </div>
+        </div>
+      </section>
 
-<h2>Контакт</h2>
-<p>Вопросы о конфиденциальности: <a href="mailto:yn3llu@gmail.com">yn3llu@gmail.com</a></p>
+      <section class="chapter chapter--card" data-chapter data-start="0.27" data-end="0.345">
+        <div class="card">
+          <div class="card__text">
+            <span class="chapter__num pop" style="--d:1">03</span>
+            <h2 class="chapter__title pop" style="--d:2" data-i18n="ch3.title">Your world <em>in numbers</em></h2>
+            <p class="chapter__text pop" style="--d:3" data-i18n="f3.text">Share of the world, of Earth’s land and its people, progress by continent and passport stamps: Ten, Euro tour, Islander and more.</p>
+          </div>
+          <div class="card__media">
+            <figure class="phone pop pop--phone" style="--d:3"><img src="assets/screens/stats.webp" alt="" width="660" height="1434"></figure>
+          </div>
+        </div>
+      </section>
 
-<hr>
+      <section class="chapter chapter--card chapter--right" data-chapter data-start="0.37" data-end="0.445">
+        <div class="card">
+          <div class="card__text">
+            <span class="chapter__num pop" style="--d:1">04</span>
+            <h2 class="chapter__title pop" style="--d:2" data-i18n="f4.title">Find any country</h2>
+            <p class="chapter__text pop" style="--d:3" data-i18n="f4.text">Search in 13 languages, filter by status, or paste a whole list to mark it at once.</p>
+          </div>
+          <div class="card__media">
+            <figure class="phone pop pop--phone" style="--d:3"><img src="assets/screens/list.webp" alt="" width="660" height="1434"></figure>
+          </div>
+        </div>
+      </section>
 
-<h1>Wander Atlas: privacy</h1>
-<p class="meta">Effective October 17, 2026</p>
+      <section class="chapter chapter--card" data-chapter data-start="0.47" data-end="0.545">
+        <div class="card">
+          <div class="card__text">
+            <span class="chapter__num pop" style="--d:1">05</span>
+            <h2 class="chapter__title pop" style="--d:2" data-i18n="f5.title">Eight themes</h2>
+            <p class="chapter__text pop" style="--d:3" data-i18n="f5.text">From Atlas to Neon Seoul and Old Map, light and dark, with app icons to match.</p>
+          </div>
+          <div class="card__media">
+            <figure class="phone pop pop--phone" style="--d:3"><img src="assets/screens/themes.webp" alt="" width="660" height="1434"></figure>
+          </div>
+        </div>
+      </section>
 
-<h2>In short</h2>
-<p>The app collects no data about you. There is no sign-up, no ads, no analytics and no tracking. The developer never receives your marks, notes, photos or location.</p>
+      <section class="chapter chapter--card chapter--right" data-chapter data-start="0.57" data-end="0.645">
+        <div class="card">
+          <div class="card__text">
+            <span class="chapter__num pop" style="--d:1">06</span>
+            <h2 class="chapter__title pop" style="--d:2" data-i18n="f6.title">On your Home Screen</h2>
+            <p class="chapter__text pop" style="--d:3" data-i18n="f6.text">Widgets with your map and count, Lock Screen widgets, and a share image for stories in one tap.</p>
+          </div>
+          <div class="card__media">
+            <figure class="phone pop pop--phone" style="--d:3"><img src="assets/screens/widgets.webp" alt="" width="660" height="1434"></figure>
+          </div>
+        </div>
+      </section>
 
-<h2>Where your marks are stored</h2>
-<p>Countries, trip years, notes and places are stored on your device. If you are signed in to iCloud, the app syncs them between your devices through your own iCloud (Apple’s key-value storage). Only you can see this data.</p>
+      <section class="chapter chapter--card chapter--wide" data-chapter data-start="0.67" data-end="0.76" id="pro">
+        <div class="card card--pro">
+          <div class="card__text">
+            <p class="eyebrow pop" style="--d:1">Pro</p>
+            <h2 class="chapter__title pop" style="--d:2" data-i18n="pro.title">One purchase. <em>Yours forever.</em></h2>
+            <p class="chapter__text pop" style="--d:3" data-i18n="pro.intro">No subscription. Unlocks on every device with your Apple Account.</p>
+            <ul class="checks">
+              <li class="pop" style="--d:4" data-i18n="pro.l1">7 more themes</li>
+              <li class="pop" style="--d:5" data-i18n="pro.l2">7 app icons in theme colours</li>
+              <li class="pop" style="--d:6" data-i18n="pro.l3">Your own colour for any country</li>
+              <li class="pop" style="--d:7" data-i18n="pro.l4">Find countries in your photos</li>
+            </ul>
+          </div>
+          <div class="icons" aria-hidden="true">
+            <img class="pop pop--icon" style="--d:3" src="assets/img/atlas.png" alt=""><img class="pop pop--icon" style="--d:4" src="assets/img/lagoon.png" alt="">
+            <img class="pop pop--icon" style="--d:5" src="assets/img/polar.png" alt=""><img class="pop pop--icon" style="--d:6" src="assets/img/sakura.png" alt="">
+            <img class="pop pop--icon" style="--d:7" src="assets/img/seoul.png" alt=""><img class="pop pop--icon" style="--d:8" src="assets/img/dunes.png" alt="">
+            <img class="pop pop--icon" style="--d:9" src="assets/img/graphite.png" alt=""><img class="pop pop--icon" style="--d:10" src="assets/img/oldmap.png" alt="">
+          </div>
+        </div>
+      </section>
 
-<h2>Photos</h2>
-<p>“Find countries in photos” runs only after you allow it. The app reads just the location and year of each photo, on your phone. Photos and their coordinates are never sent anywhere or stored; only the countries and years you confirm are saved.</p>
+      <section class="chapter chapter--card chapter--wide" data-chapter data-start="0.785" data-end="0.875" id="privacy">
+        <div class="card card--privacy">
+          <div class="card__head">
+            <p class="eyebrow pop" style="--d:1" data-i18n="privacy.eyebrow">Privacy</p>
+            <h2 class="chapter__title pop" style="--d:2" data-i18n="privacy.title">No accounts.<br><em>No ads. No tracking.</em></h2>
+          </div>
+          <ol class="steps">
+            <li class="step pop" style="--d:3">
+              <span class="step__num">01</span>
+              <h3 class="step__title" data-i18n="p1.title">On your phone</h3>
+              <p class="step__text" data-i18n="p1.text">Your marks live on your device and in your own iCloud. We never see them.</p>
+            </li>
+            <li class="step pop" style="--d:4">
+              <span class="step__num">02</span>
+              <h3 class="step__title" data-i18n="p2.title">Photos stay put</h3>
+              <p class="step__text" data-i18n="p2.text">Only the location and year of a photo are read, right on the phone. Nothing is uploaded.</p>
+            </li>
+            <li class="step pop" style="--d:5">
+              <span class="step__num">03</span>
+              <h3 class="step__title" data-i18n="p3.title">Works offline</h3>
+              <p class="step__text" data-i18n="p3.text">The whole world map is inside the app. No internet needed, even at 10,000 metres.</p>
+            </li>
+          </ol>
+          <a class="link pop" style="--d:6" href="privacy/" data-i18n="privacy.link">Privacy policy →</a>
+        </div>
+      </section>
 
-<h2>Purchases</h2>
-<p>Pro is purchased through the App Store. Apple processes payment details; the developer never sees them.</p>
+      <section class="chapter chapter--final" data-chapter data-start="0.90" data-end="1" id="get">
+        <img class="final__icon pop pop--icon" style="--d:1" src="assets/img/icon-256.png" alt="" width="96" height="96">
+        <p class="eyebrow pop" style="--d:2">Wander Atlas</p>
+        <h2 class="display pop" style="--d:3" data-i18n="final.title">Where <em>next?</em></h2>
+        <p class="ticker pop" style="--d:4" data-i18n="final.ticker">195 countries · 13 languages · 0 ads</p>
+        <div class="actions pop" style="--d:5">
+          <span class="btn btn--accent btn--static" data-i18n="cta.soonLong">Coming soon to the App Store</span>
+          <a class="btn btn--ghost" href="#features" data-i18n="cta.inside">See what’s inside</a>
+        </div>
+        <footer class="final__foot pop" style="--d:6">
+          <span>© 2026 Wander Atlas</span>
+          <a href="privacy/" data-i18n="footer.privacy">Privacy policy</a>
+          <a href="mailto:yn3llu@gmail.com" data-i18n="footer.support">Support</a>
+        </footer>
+      </section>
 
-<h2>Export and deletion</h2>
-<p>In More → Data you can save a JSON backup or a CSV table and erase all marks. Deleting the app removes data from the device; data in iCloud can be removed in iCloud settings.</p>
+      <div class="scroll-hint" data-hint aria-hidden="true">
+        <span data-i18n="hint">Scroll</span>
+        <i></i>
+      </div>
+      <div class="journey__rail" aria-hidden="true"><span data-progress></span></div>
+      <div class="journey__loader" data-loader data-i18n-tpl="loader" aria-hidden="true">Loading 0%</div>
+    </div>
+  </main>
 
-<h2>Contact</h2>
-<p>Privacy questions: <a href="mailto:yn3llu@gmail.com">yn3llu@gmail.com</a></p>
-</main>
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>

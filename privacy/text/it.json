@@ -1,0 +1,13 @@
+{
+  "name": "Wander Atlas",
+  "title": "Privacy",
+  "effective": "In vigore dal 17 ottobre 2026",
+  "sections": [
+    ["In breve", "L’app non raccoglie alcun dato su di te. Niente registrazione, pubblicità, statistiche di utilizzo o tracciamento. Lo sviluppatore non riceve mai i tuoi contrassegni, le note, le foto o la tua posizione."],
+    ["Dove sono salvati i tuoi contrassegni", "Paesi, anni di viaggio, note e luoghi sono salvati sul tuo dispositivo. Se hai effettuato l’accesso a iCloud, l’app li sincronizza tra i tuoi dispositivi tramite il tuo iCloud personale (l’archivio chiave-valore di Apple). Solo tu puoi vedere questi dati."],
+    ["Foto", "«Trova paesi nelle foto» si avvia solo dopo che l’hai consentito. L’app legge solo la posizione e l’anno di ogni foto, sul tuo telefono. Le foto e le loro coordinate non vengono mai inviate da nessuna parte né salvate; vengono salvati solo i paesi e gli anni che confermi."],
+    ["Acquisti", "Pro si acquista tramite App Store. I dati di pagamento sono gestiti da Apple; lo sviluppatore non li vede mai."],
+    ["Esportazione ed eliminazione", "In «Altro → I tuoi dati» puoi salvare un backup (JSON) o una tabella CSV e cancellare tutto. Eliminando l’app, i dati vengono rimossi dal dispositivo; quelli in iCloud si possono rimuovere dalle impostazioni di iCloud."],
+    ["Contatti", "Domande sulla privacy: {email}"]
+  ]
+}

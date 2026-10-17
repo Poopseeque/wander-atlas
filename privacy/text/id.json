@@ -1,0 +1,13 @@
+{
+  "name": "Wander Atlas",
+  "title": "Privasi",
+  "effective": "Berlaku sejak 17 Oktober 2026",
+  "sections": [
+    ["Singkatnya", "Aplikasi ini tidak mengumpulkan data apa pun tentang Anda. Tidak ada pendaftaran, iklan, analitik, maupun pelacakan. Pengembang tidak pernah menerima tanda, catatan, foto, atau lokasi Anda."],
+    ["Tempat tanda Anda disimpan", "Negara, tahun perjalanan, catatan, dan tempat disimpan di perangkat Anda. Jika Anda masuk ke iCloud, aplikasi menyinkronkannya di antara perangkat Anda melalui iCloud milik Anda sendiri (penyimpanan key-value milik Apple). Hanya Anda yang dapat melihat data ini."],
+    ["Foto", "“Cari negara dari foto” hanya berjalan setelah Anda mengizinkannya. Aplikasi hanya membaca lokasi dan tahun setiap foto, langsung di ponsel Anda. Foto dan koordinatnya tidak pernah dikirim ke mana pun atau disimpan; yang disimpan hanya negara dan tahun yang Anda konfirmasi."],
+    ["Pembelian", "Pro dibeli melalui App Store. Detail pembayaran diproses oleh Apple; pengembang tidak pernah melihatnya."],
+    ["Ekspor dan penghapusan", "Di “Lainnya → Datamu”, Anda dapat menyimpan cadangan (JSON) atau tabel CSV, dan menghapus semuanya. Menghapus aplikasi akan menghapus data dari perangkat Anda; data di iCloud dapat dihapus di pengaturan iCloud."],
+    ["Kontak", "Pertanyaan tentang privasi: {email}"]
+  ]
+}

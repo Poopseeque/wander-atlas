@@ -1,0 +1,13 @@
+{
+  "name": "Wander Atlas",
+  "title": "Gizlilik",
+  "effective": "Yürürlük tarihi: 17 Ekim 2026",
+  "sections": [
+    ["Kısaca", "Uygulama sizinle ilgili hiçbir veri toplamaz. Kayıt, reklam, analiz araçları ve takip yoktur. İşaretleriniz, notlarınız, fotoğraflarınız ve konumunuz hiçbir zaman geliştiriciye ulaşmaz."],
+    ["İşaretleriniz nerede saklanır", "Ülkeler, seyahat yılları, notlar ve yerler cihazınızda saklanır. iCloud’a giriş yaptıysanız uygulama bunları kendi iCloud’unuz (Apple’ın anahtar-değer depolama alanı) üzerinden cihazlarınız arasında eşzamanlar. Bu verileri yalnızca siz görebilirsiniz."],
+    ["Fotoğraflar", "“Fotoğraflardan ülke bul” yalnızca siz izin verdikten sonra çalışır. Uygulama her fotoğrafın yalnızca konumunu ve yılını okur; bu işlem telefonunuzda yapılır. Fotoğraflar ve koordinatları hiçbir yere gönderilmez ve saklanmaz; yalnızca onayladığınız ülkeler ve yıllar kaydedilir."],
+    ["Satın almalar", "Pro, App Store üzerinden satın alınır. Ödeme bilgilerini Apple işler; geliştirici bunları hiçbir zaman görmez."],
+    ["Dışa aktarma ve silme", "“Diğer → Verilerin” bölümünden bir yedek (JSON) ya da CSV tablosu kaydedebilir ve her şeyi silebilirsiniz. Uygulamayı silmek verileri cihazınızdan kaldırır; iCloud’daki veriler iCloud ayarlarından silinebilir."],
+    ["İletişim", "Gizlilikle ilgili sorular: {email}"]
+  ]
+}
